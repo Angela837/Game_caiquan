@@ -6,20 +6,21 @@ public  class Person extends Player {
 	Scanner input = new Scanner(System.in);
 	 // 玩家名字
 	public void inputName() {
-		setPlayName(input.next());
+		String name=input.next();
+		setPlayName(name);
 	}
 	 // 玩家出拳
 	public int myFist() {
 		int num=input.nextInt();
 		switch (num) {
 		case 1:
-			System.out.println("剪刀");
+			System.out.println("你出拳：剪刀");
 			break;
 		case 2:
-			System.out.println("石头");
+			System.out.println("你出拳：石头");
 			break;
 		case 3:
-			System.out.println("布");
+			System.out.println("你出拳：布");
 			break;
 
 		default:

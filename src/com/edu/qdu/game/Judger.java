@@ -52,15 +52,12 @@ public class Judger {
 	// 询问名字
 	public void askName() {
 		Scanner input = new Scanner(System.in);
-		String n=null;
-		
-			System.out.print("请选择对方的角色（1：刘备 2：孙权 3：曹操）：");
-			 
-			computer.inputName();
-		
+		String n = null;
+
+		System.out.print("请选择对方的角色（1：刘备 2：孙权 3：曹操）：");
+		computer.inputName();
 
 		System.out.print("请输入你的名字：");
-		
 		person.inputName();
 		System.out.println(computer.getPlayName() + "  VS  " + person.getPlayName());
 
@@ -72,10 +69,8 @@ public class Judger {
 		int a = 0;
 		do {
 			System.out.print("请出拳：1.剪刀2.石头3.布（输入相应的数字）：");
-			System.out.println("你出拳：");
-			a=person.myFist();
-			
-		//	System.out.print();
+			a = person.myFist();
+
 		} while (a != 1 && a != 2 && a != 3);
 		System.out.print(computer.getPlayName() + "出拳：");
 		int b = computer.myFist();// 随机的电脑出拳
