@@ -2,31 +2,33 @@ package com.edu.qdu.game;
 
 import java.util.Scanner;
  class Computer extends Player {
-
+	 Scanner input = new Scanner(System.in);
 	//给电脑选择名字
-	public String inputName(String name) {
-		
+	public void inputName() {
+		int name=input.nextInt();
 		switch (name) {
-		case "1":
-			playName="刘备";
+		case 1:
+			setPlayName("刘备");
 			break;
-		case "2":
-			playName="孙权";
+		case 2:
+			setPlayName("孙权");
 			break;
-		case "3":
-			playName="曹操";
+		case 3:
+			setPlayName("曹操");
 			break;
 
 		default:
 			System.out.println("你的选择有误!请重新选择！");
 			break;
 		}
-		return playName;
+		
 	}
 
+
+
 	//电脑出拳
-	public int myFist(int num) {
-		num = (int) (Math.random()  * 2 + 1);
+	public int myFist() {
+		int num = (int) (Math.random()  * 3 + 1);
 		if(num==1){
 			System.out.println("剪刀");
 			

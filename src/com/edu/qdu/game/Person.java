@@ -1,14 +1,16 @@
 package com.edu.qdu.game;
 
-public class Person extends Player {
+import java.util.Scanner;
 
+public  class Person extends Player {
+	Scanner input = new Scanner(System.in);
 	 // 玩家名字
-	public String inputName(String name) {
-		return name;
+	public void inputName() {
+		setPlayName(input.next());
 	}
 	 // 玩家出拳
-	public int myFist(int num) {
-		boolean flag=false;
+	public int myFist() {
+		int num=input.nextInt();
 		switch (num) {
 		case 1:
 			System.out.println("剪刀");
@@ -26,5 +28,6 @@ public class Person extends Player {
 		}
 		return num;
 	}
+	
 
 }
